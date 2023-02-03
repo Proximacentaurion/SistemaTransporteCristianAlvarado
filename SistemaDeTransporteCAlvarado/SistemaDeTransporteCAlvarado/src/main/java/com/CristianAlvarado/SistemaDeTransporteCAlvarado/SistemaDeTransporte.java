@@ -3,6 +3,9 @@ package com.CristianAlvarado.SistemaDeTransporteCAlvarado;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * prueba 2git
+ */
 public class SistemaDeTransporte {
     private ArrayList<Conexion> conexiones;
     private ArrayList<Bus> buses;
