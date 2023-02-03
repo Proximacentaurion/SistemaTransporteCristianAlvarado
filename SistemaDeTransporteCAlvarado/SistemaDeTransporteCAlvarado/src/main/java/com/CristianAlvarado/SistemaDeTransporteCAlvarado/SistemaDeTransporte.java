@@ -1,11 +1,10 @@
 package com.CristianAlvarado.SistemaDeTransporteCAlvarado;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/**
- * prueba 2git
- */
 public class SistemaDeTransporte {
     private ArrayList<Conexion> conexiones;
     private ArrayList<Bus> buses;
@@ -18,7 +17,7 @@ public class SistemaDeTransporte {
         conexiones=new ArrayList<Conexion>();
         buses=new ArrayList<Bus>();
         rutas=new ArrayList<Ruta>();
-        rutas=new ArrayList<Pasajero>();
+        pasajeros=new ArrayList<Pasajero>();
         viajes=new ArrayList<Viaje>();
     }
 
@@ -35,14 +34,13 @@ public class SistemaDeTransporte {
         rutas.add(nuevaRuta);
     }
     public void agregarPasajero(String nombre, int cedula){
-        Pasajero nuevoPasajero=new Pasajero(cedula,nombre);
+        Pasajero nuevoPasajero=new Pasajero(nombre,cedula);
     }
     /**
      * Se crea un nuevo viaje y se agrega a la lista de viajes
      */
     public void agregarViaje(int numero, Pasajero pasajero, String estado, Ruta ruta,int valor,Bus bus, Silla silla) {
-
-
+        Viaje nuevoViaje=new Viaje(numero,pasajero,estado,ruta,valor,bus,silla);
     }
 
     public void venderViaje(){
