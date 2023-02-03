@@ -7,28 +7,38 @@ public class Viaje {
     private String estado;
     private Ruta ruta;
     private int valor;
+    private Bus bus;
+    private Silla silla;
     //El estado del servicio puede ser iniciado y terminado, o vendido y terminado, o iniciado, en curso, terminado. Cancelado, retrazado, sin novedad.
-    public Viaje(int numero, Pasajero pasajero, String estado, Ruta ruta,int valor){
+    public Viaje(int numero, Pasajero pasajero, String estado, Ruta ruta,int valor,Bus bus, Silla silla){
         this.numero=numero;
         this.pasajero=pasajero;
         this.estado=estado;
         this.ruta=ruta;
         this.valor=valor;
-    }
-    public int darNumero(){
-        return numero;
-    }
-    public Pasajero darPasajero(){
-        return pasajero;
-    }
-    public String darEstado(){
-        return estado;
-    }
-    public Ruta darRuta(){
-        return ruta;
-    }
-    public int darValor(){
-        return valor;
+        this.bus=bus;
+        this.silla=silla;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+    public Pasajero getPasajero() {
+        return pasajero;
+    }
+    public String getEstado() {
+        return estado;
+    }
+    public Ruta getRuta() {
+        return ruta;
+    }
+    public int getValor() {
+        return valor;
+    }
+    public Bus getBus() {
+        return bus;
+    }
+    public Silla getSilla() {
+        return silla;
+    }
 }
